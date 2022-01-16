@@ -42,6 +42,17 @@ function Register(): JSX.Element {
     return response;
   };
 
+  const IsCancel = () =>
+  {
+    var answer = window.confirm("すべて取り消しますか");
+    if(answer ) {
+      navigate("/login");
+      return true;
+   } else {
+      navigate("/register");
+      return false;
+   }           
+  }
   return (
     <div className="register">
         <TextField label="First Name2" variant="outlined" onChange={(event) => setFirstName(event.target.value)}/>
@@ -58,7 +69,7 @@ function Register(): JSX.Element {
           }}> 
           Register
           </Button>
-          <Button variant="contained">Cancel</Button>
+          <Button variant="contained" onClick={()=> IsCancel()} >Cancel</Button>
         </div>
     </div>
   );

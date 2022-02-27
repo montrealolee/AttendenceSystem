@@ -90,8 +90,8 @@ console.log(workdate.toString());
             <Button onClick={()=> setDialogOpen(true)}>勤怠登録</Button>
           </div>
           <div className="output-area">
-          <TableContainer>
-              <Table aria-label="customized table" >
+          <TableContainer >
+              <Table aria-label="customized table" size='medium'>
                 <TableHead>
                   <TableRow>
                     <TableCell align="center">勤務回数</TableCell>

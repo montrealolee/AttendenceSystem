@@ -56,6 +56,7 @@ function Kindai() : JSX.Element{
   return response;
 };
 console.log(workdate.toString());
+
   useEffect(()=> {
     if(state) {
       setUserString({
